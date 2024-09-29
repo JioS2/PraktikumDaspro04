@@ -10,7 +10,7 @@ public class Kafe09 {
         //menginput menu,ukurancup,jumlah,keanggotaan
     System.out.println("Masukkan menu pilihan anda: ");
     menu = sc.nextLine();
-    System.out.println("Masukkan ukuran cup: ");
+    System.out.println("Masukkan ukuran cup (S/M/L): ");
     ukuranCup = sc.next().charAt(0);
     System.out.println("Masukkan jumlah: ");
     jumlah = sc.nextInt();
@@ -41,6 +41,9 @@ public class Kafe09 {
         case 'L':
             totalHarga += 0.4 * totalHarga;
             break;
+            default:
+                System.out.println("Menu tidak tersedia.");
+                return;
     }
     //memasukkan status keanggotaan
         double diskon = keanggotaan ? 0.1 : 0;
